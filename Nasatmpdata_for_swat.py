@@ -1,6 +1,6 @@
+# Downloading Tepareture data from NASA access website for SWAT module.
 import requests
 import pandas as pd
-import re
 locations = [(22.800,91.710),(22.700,91.830),(22.680,91.880),(22.470,91.790)]
 base_url = r"https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M_MAX,T2M_MIN&community=RE&longitude={longitude}&latitude={latitude}&start=19820101&end=20171231&format=CSV"
 for latitude, longitude in locations:
