@@ -1,4 +1,4 @@
-# Downloading Tepareture data from NASA access website for SWAT module.
+# Downloading Tepareture data from NASA access Power website via python for SWAT module.
 import requests
 import pandas as pd
 import re
