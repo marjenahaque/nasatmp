@@ -3,8 +3,8 @@ import pandas as pd
 import numpy as np
 import os
 
-username = 'marjinahaque64@gmail.com'
-password = 'fZr4UABn'
+username = '************.com'
+password = '******'
 
 years = np.arange(1998,2016)
 
