@@ -6,9 +6,9 @@ Before running the script, ensure that you have the following prerequisites:
 
 - Python 3.x installed on your system.
 - Required Python libraries installed (you can install them using pip):
-  -**requests**: Used for making HTTP requests.
-  -**pandas**: Used for data manipulation.
-  -**re**: Regular expressions library for text processing.
+  - **requests**: Used for making HTTP requests.
+  - **pandas**: Used for data manipulation.
+  - **re**: Regular expressions library for text processing.
 ## Usage
 1.Modify the locations list with the latitude and longitude coordinates for the locations you are interested in. You can add or remove coordinates as needed.
 
@@ -21,8 +21,8 @@ Before running the script, ensure that you have the following prerequisites:
 ## Output
 For each location specified in the **locations** list, you will get two files:
 
--**'tmp{LAT}.csv'**: A CSV file containing daily temperature data with columns 'T2M_MAX' and 'T2M_MIN'.
--**'tmp{LAT}.txt'**: A CSV file with the same data, but with columns renamed to the date in YYYYMMDD format (e.g., '19820101' for January 1, 1982).
+- **'tmp{LAT}.csv'**: A CSV file containing daily temperature data with columns 'T2M_MAX' and 'T2M_MIN'.
+- **'tmp{LAT}.txt'**: A CSV file with the same data, but with columns renamed to the date in YYYYMMDD format (e.g., '19820101' for January 1, 1982).
 ## Notes
 The script uses the latitude to generate a unique filename for each location by removing non-alphanumeric characters from the latitude value.
 Make sure to adjust the file paths in the script (**pd.read_csv** and **nasa.to_csv**) according to your system's configuration.
