@@ -11,7 +11,7 @@ for latitude, longitude in locations:
     # print(LAT)
     response = requests.get(url=api_request_url, verify=True, timeout=30.00)
     open('tmp'+ str(LAT) + '.csv', 'wb').write(response.content)
-    nasa = pd.read_csv(r'C:\Users\marji\PycharmProjects\netcdftocsv\tmp'+str(LAT)+'.csv',skiprows=10, usecols=['T2M_MAX','T2M_MIN'])
+    nasa = pd.read_csv(r'C:\Users\to\your\path\tmp'+str(LAT)+'.csv',skiprows=10, usecols=['T2M_MAX','T2M_MIN'])
     nasa.rename(columns={'T2M_MAX':19820101,'T2M_MIN':''},inplace= True)
     print(nasa)
     nasa.to_csv('tmp'+str(LAT)+'.txt',index = False)
