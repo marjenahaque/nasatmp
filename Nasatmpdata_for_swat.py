@@ -2,7 +2,8 @@
 import requests
 import pandas as pd
 import re
-locations = [(22.800,91.710),(22.700,91.830),(22.680,91.880),(22.470,91.790)]
+locations_df = pd.read_csv(r'path\to\your\file.csv') 
+locations = locations_df[['latitude', 'longitude']].values.tolist()
 base_url = r"https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M_MAX,T2M_MIN&community=RE&longitude={longitude}&latitude={latitude}&start=19820101&end=20171231&format=CSV"
 for latitude, longitude in locations:
     api_request_url = base_url.format(longitude=longitude, latitude=latitude)
